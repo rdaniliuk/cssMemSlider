@@ -29,6 +29,10 @@ body{
 	background-color: #25282a ;
 	color: #fff;
 }
+label{
+	display: flex;
+	align-items: center;
+}
 
 .slides {
 	margin: 0 auto;
@@ -52,16 +56,23 @@ input:checked + .slide {
 	display: block;
 	transform: scale(1);
 }
-
+.content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
 .nav  {
 	width: 50%;
 	display: block;
-	text-align: center;
+	align-content: center;
+	justify-content: end;
+	display: flex;
+	gap: 0.5rem;
 }
 .nav .nav_dot {
 	width: 1rem;
 	height: 1rem;
-	margin: 0px 5px 0px 0px;
 	border-radius: 100%;
 	display: inline-block;
 	background-color: #71abff;
