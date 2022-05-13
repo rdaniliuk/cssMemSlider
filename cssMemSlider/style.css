@@ -12,7 +12,7 @@ html,body{
 	width: 100%;
 	font-size: 100%;
 	line-height: 25px;
-	font-size: 14px;
+	font-size: 16px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -35,7 +35,7 @@ label{
 }
 
 .slides {
-	margin: 0 auto;
+	margin: 10% auto;
 	width: 50%;
 	display: flex;
 	flex-direction: column;
@@ -45,7 +45,17 @@ label{
 }
 .slide {
 	display: none;
-	transform: scale(0);
+}
+.slide img,p {
+	animation-name: anim;
+	animation-duration: 0.8s;
+}
+@keyframes anim {
+	0%   {opacity: 0;}
+	25%   {opacity: 0.25;}
+	50%  {opacity: 0.5;}
+	75%  {opacity: 0.75;}
+	100% {opacity: 1;}
 }
 .slide_image img {
 	width: 100%;
@@ -55,6 +65,7 @@ label{
 input:checked + .slide {
 	display: block;
 	transform: scale(1);
+	transition: all 2s linear;
 }
 .content{
 	display: flex;
@@ -70,15 +81,39 @@ input:checked + .slide {
 	display: flex;
 	gap: 0.5rem;
 }
+
+.nav_lable{
+	width: 2rem;
+	height: 2rem;
+}
 .nav .nav_dot {
 	width: 1rem;
 	height: 1rem;
 	border-radius: 100%;
 	display: inline-block;
 	background-color: #71abff;
+	border: 0.1rem solid #71abff;
+	transition: 0.3s;
 }
 
 .nav .nav_dot:hover {
 	cursor: pointer;
 	background-color: #fff;
+	border-color: #fff;
+}
+
+
+
+input#mem1:checked + .slide .nav label#nav_dot_1 .nav_dot,
+input#mem2:checked + .slide .nav label#nav_dot_2 .nav_dot,
+input#mem3:checked + .slide .nav label#nav_dot_3 .nav_dot,
+input#mem4:checked + .slide .nav label#nav_dot_4 .nav_dot {
+	background-color: #25282a;
+}
+
+input#mem1:checked + .slide .nav label#nav_dot_1 .nav_dot,
+input#mem2:checked + .slide .nav label#nav_dot_2 .nav_dot,
+input#mem3:checked + .slide .nav label#nav_dot_3 .nav_dot,
+input#mem4:checked + .slide .nav label#nav_dot_4 .nav_dot {
+	background-color: #25282a;
 }
