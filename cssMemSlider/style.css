@@ -64,14 +64,13 @@ label{
 
 input:checked + .slide {
 	display: block;
-	transform: scale(1);
-	transition: all 2s linear;
 }
 .content{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	align-content: center;
+	margin-top: 5%;
 }
 .nav  {
 	width: 50%;
@@ -95,21 +94,17 @@ input:checked + .slide {
 	border: 0.1rem solid #71abff;
 	transition: 0.3s;
 }
-
-.nav .nav_dot:hover {
+label:hover{
 	cursor: pointer;
+}
+
+label:hover .nav_dot {
 	background-color: #fff;
 	border-color: #fff;
+	cursor: pointer;
 }
 
 
-
-input#mem1:checked + .slide .nav label#nav_dot_1 .nav_dot,
-input#mem2:checked + .slide .nav label#nav_dot_2 .nav_dot,
-input#mem3:checked + .slide .nav label#nav_dot_3 .nav_dot,
-input#mem4:checked + .slide .nav label#nav_dot_4 .nav_dot {
-	background-color: #25282a;
-}
 
 input#mem1:checked + .slide .nav label#nav_dot_1 .nav_dot,
 input#mem2:checked + .slide .nav label#nav_dot_2 .nav_dot,
